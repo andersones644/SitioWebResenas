@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contáctanos</title>
+</head>
+<body>
+  <header>
+    <h1>Reseñas</h1>
+    <nav>
+      <a href="../index.html">Inicio</a>
+      <a href="/html/libros.html">Libros</a>
+      <a href="/html/peliculas.html">Películas</a>
+      <a href="/html/videojuegos.html">Videojuegos</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>¿Tienes una sugerencia?</h2>
+      <p>Déjanos tus recomendaciones de libros, películas o videojuegos para reseñar. Estaremos encantados de leerte.</p>
+    </section>
+
+    <aside>
+      <h3>Formulario de sugerencias</h3>
+      <form action="#" method="post">
+        <div>
+          <label for="nombre">Nombre:</label><br>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div>
+          <label for="correo">Correo electrónico:</label><br>
+          <input type="email" id="correo" name="correo" required>
+        </div>
+
+        <div>
+          <label for="tipo">Tipo de recomendación:</label><br>
+          <select id="tipo" name="tipo" required>
+            <option value="">Selecciona una opción</option>
+            <option value="libro">Libro</option>
+            <option value="pelicula">Película</option>
+            <option value="videojuego">Videojuego</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="sugerencia">Tu recomendación:</label><br>
+          <textarea id="sugerencia" name="sugerencia" rows="5" required></textarea>
+        </div>
+
+        <div>
+          <button type="submit">Enviar sugerencia</button>
+        </div>
+      </form>
+    </aside>
+  </main>
+
+  <footer>
+    <section>
+      <h3>Síguenos</h3>
+      <nav>
+        <a href="https://facebook.com" target="_blank">
+          <img src="/icons/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://twitter.com" target="_blank">
+          <img src="/icons/x.png" alt="Twitter">
+        </a>
+        <a href="https://instagram.com" target="_blank">
+          <img src="/icons/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://youtube.com" target="_blank">
+          <img src="/icons/youtube.png" alt="Youtube">
+        </a>
+      </nav>
+    </section>
+      <p>© 2025 Reseñas. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
