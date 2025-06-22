@@ -1,92 +1,105 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <title>Libros</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Reseñas</h1>
-    <nav>
-      <a href="../index.html">Inicio</a>
-      <a href="peliculas.html">Películas</a>
-      <a href="videojuegos.html">Videojuegos</a>
-    </nav>
-    <a href="contacto.html">Contáctanos</a>
+    <div class="container">
+      <h1>Reseñas</h1>
+      <nav class="nav-container">
+        <a href="../index.html">Inicio</a>
+        <a href="peliculas.html">Películas</a>
+        <a href="videojuegos.html">Videojuegos</a>
+      </nav>
+      <a href="contacto.html" class="cta-button">Contáctanos</a>
+    </div>
   </header>
 
-  <main>
-    <h1>Libros</h1>
-    
-    <section>
+  <main class="container justify-text">
+    <div class="section-header">
       <h2>Tendencias</h2>
-      <div>
-        <article>
-          <h3>El Principito</h3>
-          <div>Antoine de Saint-Exupéry</div>
-          <img src="../images/books/Principito.jpg" alt="El Principito">
-          <aside>
-            <p>
-              Un aviador queda incomunicado en el desierto tras sufrir una avería en su avión a mil millas de cualquier región habitada. Allí se encontrará con un pequeño príncipe de cabellos de oro que afirma vivir en el asteroide B 612 (donde hay una rosa y tres volcanes) con el que no tardará en congeniar. En sus conversaciones, el principito le relatará su visión sobre la vida y la gente, de esa sabiduría que se pierde cuando las personas abandonamos la infancia.
-              La historia de la génesis de El principito quizás sea una de mis favoritas de todos los tiempos, a la altura de la propia obra, si se me permite. Tras ser llamado a filas en 1939 y participar en varias arriesgadas misiones aéreas, Antoine de Saint-Exupéry  abandona Francia una vez producida la ocupación alemana, instalándose en Estados Unidos con el firme objetivo de convencer a los norteamericanos para que entren en el conflicto mundial. El autor francés será requerido por el ejército cuatro años después, pero en ese lapso, aparte de incesantes intentos por volver al frente, Antoine escribió El principito.
-              No se me ocurre un momento mejor (o quizás sea más preciso decir idóneo) para escribir una obra de la sensibilidad y el calado filosófico de El principito que durante una guerra. Imagino que pocos contextos deben trastocarnos tanto por dentro como una contienda de la magnitud de la Segunda Guerra Mundial. El estado emocional de aquellos que lo vivieron desde dentro se me antoja inaccesible, y quizás por ello no deja de fascinarme que de una situación tan horripilante puedan nacer historias tan hermosas como la que Saint-Exupéry cuenta en El principito.
-            </p>
-            <div>Puntuación</div>
-            <div>95</div>
-          </aside>
-        </article>
+    </div>
+    <div class="reviews-grid">
 
-        <article>
-          <h3>Las Meditaciones de Marco Aurelio</h3>
-          <div>Marco Aurelio</div>
-          <img src="../images/books/MeditacionesMarcoAurelio.jpg" alt="Las Meditaciones de Marco Aurelio">
-          <aside>
-            <p>
-              Decían los estoicos que si quieres alcanzar la libertad y la tranquilidad debes ser indiferente a las comodidades materiales, la fortuna y dedicarte a una vida regida por los principios de la razón y la virtud. Tales principios, junto a la inteligencia (vista como la capacidad de hacer siempre aquello que resulta más beneficioso y bueno) eran los que dominaban las horas del bueno de Marco Aurelio, el emperador filósofo que reunió una gran cantidad de frases célebres y memorables, auténticas enseñanzas de vida, en este conjunto de doce libros (o capítulos) titulado Meditaciones. Un libro sencillo pero valioso, pleno de sabiduría, que ayuda a encaminar sendas perdidas.
-              El primero de esos libros está dedicado a recopilar -en cierto modo también a homenajear- las principales enseñanzas que Marco Aurelio ha recibido de familiares, amigos, maestros, filósofos y demás preceptores que han dejado huella en el alma del emperador. Ahí ya se encuentran resumidas las máximas que más tarde desarrollará, el germen de su top de valores según los cuales vivir. Especialmente interesantes las palabras que dedica a su padre, sacando a relucir esa vertiente estoica que impregna todo su pensamiento:
-            </p>
-            <div>Puntuación</div>
-            <div>98</div>
-          </aside>
-        </article>
+      <article class="review-card">
+        <h3 class="review-card-title">El Principito</h3>
+        <div class="review-card-author">Antoine de Saint-Exupéry</div>
+        <div class="review-card-image">
+          <img src="../images/books/Principito.jpg" alt="El Principito" />
+        </div>
+        <aside class="review-card-content">
+          <p class="review-card-text">
+            Un aviador queda incomunicado en el desierto tras sufrir una avería en su avión a mil millas de cualquier región habitada. Allí se encontrará con un pequeño príncipe de cabellos de oro que afirma vivir en el asteroide B 612, con el que no tardará en congeniar. En sus conversaciones, el principito le relatará su visión sobre la vida y la gente, esa sabiduría que se pierde cuando abandonamos la infancia.
+            La historia de la génesis de El principito quizás sea una de mis favoritas. Saint-Exupéry lo escribió en Estados Unidos mientras intentaba convencer a los norteamericanos de unirse a la guerra. En medio de ese conflicto, nació esta obra llena de sensibilidad y profundidad. No se me ocurre un momento más impactante para escribir algo tan puro que durante una guerra. De una situación tan horripilante nació una historia hermosa y filosófica.
+          </p>
+          <div class="score-label">Puntuación</div>
+          <div class="score-badge score-excellent">95</div>
+        </aside>
+      </article>
 
-        <article>
-          <h3>El retrato de Dorian Grey</h3>
-          <div>Oscar Wilde</div>
-          <img src="../images/books/ElRetratoDeDorianGray.jpg" alt="El retrato de Dorian Grey">
-          <aside>
-            <p>
-              El éxito que alcanzó Wilde se basaba en el ingenio mordaz y punzante que derrochaba en sus obras, dedicadas casi siempre a fustigar las hipocresías de sus contemporáneos. La crítica social, tan común y aceptada hoy en día, resultaba caustica en la burguesía de la época victoriana y, por eso, al amigo Oscar le llovían bofetadas cada vez que una de sus obras veía la luz. Con esta novela en cuestión, no fue diferente: parte de la crítica llegó a tacharla, incluso, de indecente.
-              Desde mi punto de vista, es una novela metafísica que representa la obsesión sobre el poder de la juventud y la belleza, obsesión que compartió el propio autor hasta el mismo día de su muerte, prefiriendo comprar un traje elegante que un plato de sopa caliente, cuando ya se encontraba enfermo y sumido en la miseria. Al mismo tiempo, encuentro que es una profunda reflexión sobre la naturaleza del arte y la perversidad de la estética. Esta preocupación por la interferencia del arte y la belleza en la vida son una constante en la obra del autor.
-              «Revelar el arte y ocultar al artista es la meta del arte», dice uno de los brillantes diálogos que podemos encontrar entre sus páginas, donde se refleja la tensión entre la moral y el hedonismo que irá aumentando conforme avancemos en su trama. Trama única y lineal, por cierto, donde el autor peca de novato en la «distancia larga», ya que su especialidad siempre fueron las obras de teatro, los cuentos y la poesía. Quizá por eso, y aunque suene raro, fuese la única novela que escribió en su vida.
-            </p>
-            <div>Puntuación</div>
-            <div>97</div>  
-          </aside>
-        </article>
-      </div>
-    </section>
+      <article class="review-card">
+        <h3 class="review-card-title">Las Meditaciones de Marco Aurelio</h3>
+        <div class="review-card-author">Marco Aurelio</div>
+        <div class="review-card-image">
+          <img src="../images/books/MeditacionesMarcoAurelio.jpg" alt="Las Meditaciones de Marco Aurelio" />
+        </div>
+        <aside class="review-card-content">
+          <p class="review-card-text">
+            Los estoicos decían que si deseas libertad y tranquilidad, debes ser indiferente a las comodidades y vivir con virtud. Marco Aurelio aplicó esto en su vida y sus meditaciones son reflejo de ello: enseñanzas de vida directas y profundas, escritas desde su experiencia como emperador y filósofo.
+            En el primer libro rinde homenaje a sus maestros y familiares. Ahí ya están las semillas de sus principios: autodominio, humildad, compasión. Es un libro sencillo pero lleno de sabiduría, perfecto para quienes buscan claridad en medio del caos. Su filosofía práctica ha influenciado a generaciones, y sigue vigente hoy más que nunca.
+          </p>
+          <div class="score-label">Puntuación</div>
+          <div class="score-badge score-excellent">98</div>
+        </aside>
+      </article>
+
+      <article class="review-card">
+        <h3 class="review-card-title">El retrato de Dorian Gray</h3>
+        <div class="review-card-author">Oscar Wilde</div>
+        <div class="review-card-image">
+          <img src="../images/books/ElRetratoDeDorianGray.jpg" alt="El retrato de Dorian Gray" />
+        </div>
+        <aside class="review-card-content">
+          <p class="review-card-text">
+            Wilde alcanzó el éxito con un estilo punzante, crítico y elegante. El retrato de Dorian Gray es su única novela y refleja su obsesión con la juventud, la belleza y la moral. Es una reflexión sobre la estética, la corrupción y el alma humana.
+            La historia plantea el dilema de vivir sin consecuencias y cómo la apariencia puede ocultar la decadencia moral. “Revelar el arte y ocultar al artista es la meta del arte”, dice uno de sus brillantes diálogos. Esta novela es una joya literaria que mezcla crítica social con misticismo y filosofía, y deja una marca profunda en quien la lee.
+          </p>
+          <div class="score-label">Puntuación</div>
+          <div class="score-badge score-excellent">97</div>
+        </aside>
+      </article>
+
+    </div>
   </main>
 
   <footer>
-    <section>
-      <h3>Síguenos</h3>
-      <nav>
-        <a href="https://facebook.com" target="_blank">
-          <img src="../icons/facebook.png" alt="Facebook">
-        </a>
-        <a href="https://twitter.com" target="_blank">
-          <img src="../icons/x.png" alt="Twitter">
-        </a>
-        <a href="https://instagram.com" target="_blank">
-          <img src="../icons/instagram.png" alt="Instagram">
-        </a>
-        <a href="https://youtube.com" target="_blank">
-          <img src="../icons/youtube.png" alt="Youtube">
-        </a>
-      </nav>
-    </section>
+    <div class="container">
+      <section>
+        <h3>Síguenos</h3>
+        <nav>
+          <a href="https://facebook.com" target="_blank" rel="noopener">
+            <img src="../icons/facebook.png" alt="Facebook" />
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener">
+            <img src="../icons/x.png" alt="Twitter" />
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener">
+            <img src="../icons/instagram.png" alt="Instagram" />
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener">
+            <img src="../icons/youtube.png" alt="YouTube" />
+          </a>
+        </nav>
+      </section>
       <p>© 2025 Reseñas. Todos los derechos reservados.</p>
+    </div>
   </footer>
 </body>
 </html>

@@ -3,39 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <title>Contáctanos</title>
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Reseñas</h1>
-    <nav>
-      <a href="../index.html">Inicio</a>
-      <a href="libros.html">Libros</a>
-      <a href="peliculas.html">Películas</a>
-      <a href="videojuegos.html">Videojuegos</a>
-    </nav>
+    <div class="container">
+      <h1>Reseñas</h1>
+      <nav class="nav-container">
+        <a href="../index.html">Inicio</a>
+        <a href="libros.html">Libros</a>
+        <a href="peliculas.html">Películas</a>
+        <a href="videojuegos.html">Videojuegos</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section>
+  <main class="container">
+    <section class="section-header">
       <h2>¿Tienes una sugerencia?</h2>
-      <p>Déjanos tus recomendaciones de libros, películas o videojuegos para reseñar. Estaremos encantados de leerte.</p>
     </section>
 
-    <aside>
-      <h3>Formulario de sugerencias</h3>
-      <form action="#" method="post">
-        <div>
-          <label for="nombre">Nombre:</label><br>
+    <section class="form-section">
+      <h3>Déjanos tus recomendaciones de libros, películas o videojuegos para reseñar. Estaremos encantados de leerte.</h3>
+      <form class="contact-form form-grid">
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
           <input type="text" id="nombre" name="nombre" required>
         </div>
 
-        <div>
-          <label for="correo">Correo electrónico:</label><br>
+        <div class="form-group">
+          <label for="correo">Correo electrónico:</label>
           <input type="email" id="correo" name="correo" required>
         </div>
 
-        <div>
-          <label for="tipo">Tipo de recomendación:</label><br>
+        <div class="form-group">
+          <label for="tipo">Tipo de recomendación:</label>
           <select id="tipo" name="tipo" required>
             <option value="">Selecciona una opción</option>
             <option value="libro">Libro</option>
@@ -44,37 +50,36 @@
           </select>
         </div>
 
-        <div>
-          <label for="sugerencia">Tu recomendación:</label><br>
-          <textarea id="sugerencia" name="sugerencia" rows="5" required></textarea>
+        <div class="form-group-full">
+          <textarea id="sugerencia" name="sugerencia" rows="5" cols="100" required>Tu recomendación</textarea>
         </div>
 
-        <div>
-          <button type="submit">Enviar sugerencia</button>
-        </div>
+        <button type="submit" class="cta-button">Enviar sugerencia</button>
       </form>
-    </aside>
+    </section>
   </main>
 
   <footer>
-    <section>
-      <h3>Síguenos</h3>
-      <nav>
-        <a href="https://facebook.com" target="_blank">
-          <img src="../icons/facebook.png" alt="Facebook">
-        </a>
-        <a href="https://twitter.com" target="_blank">
-          <img src="../icons/x.png" alt="Twitter">
-        </a>
-        <a href="https://instagram.com" target="_blank">
-          <img src="../icons/instagram.png" alt="Instagram">
-        </a>
-        <a href="https://youtube.com" target="_blank">
-          <img src="../icons/youtube.png" alt="Youtube">
-        </a>
-      </nav>
-    </section>
+    <div class="container">
+      <section>
+        <h3>Síguenos</h3>
+        <nav>
+          <a href="https://facebook.com" target="_blank" rel="noopener">
+            <img src="../icons/facebook.png" alt="Facebook">
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener">
+            <img src="../icons/x.png" alt="Twitter">
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener">
+            <img src="../icons/instagram.png" alt="Instagram">
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener">
+            <img src="../icons/youtube.png" alt="Youtube">
+          </a>
+        </nav>
+      </section>
       <p>© 2025 Reseñas. Todos los derechos reservados.</p>
+    </div>
   </footer>
 </body>
 </html>
