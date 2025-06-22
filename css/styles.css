@@ -430,22 +430,6 @@ section {
   border-radius: 5px;
 }
 
-.cta-button {
-  grid-column: span 6;
-  padding: 0.75rem;
-  background-color: var(--color2, #21b6a8);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  text-align: center;
-}
-
-.cta-button:hover {
-  background-color: var(--color3, #1a8f83);
-}
-
 /* Footer */
 footer {
   background: linear-gradient(135deg, var(--color1) 0%, var(--color2) 100%);
