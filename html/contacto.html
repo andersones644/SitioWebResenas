@@ -19,6 +19,8 @@
         <a href="peliculas.html">Películas</a>
         <a href="videojuegos.html">Videojuegos</a>
       </nav>
+      <a href="html/contacto.html" class="cta-button">Cerrar Sesión</a>
+      </nav>
     </div>
   </header>
 
@@ -31,17 +33,17 @@
       <h3>Déjanos tus recomendaciones de libros, películas o videojuegos para reseñar. Estaremos encantados de leerte.</h3>
       <form class="contact-form form-grid">
         <div class="form-group">
-          <label for="nombre">Nombre:</label>
+          <h4><label for="nombre">Nombre:</label></h4>
           <input type="text" id="nombre" name="nombre" required>
         </div>
 
         <div class="form-group">
-          <label for="correo">Correo electrónico:</label>
+          <h4><label for="correo">Correo electrónico:</label></h4>
           <input type="email" id="correo" name="correo" required>
         </div>
 
         <div class="form-group">
-          <label for="tipo">Tipo de recomendación:</label>
+          <h4><label for="tipo">Tipo de recomendación:</label></h4>
           <select id="tipo" name="tipo" required>
             <option value="">Selecciona una opción</option>
             <option value="libro">Libro</option>
@@ -51,10 +53,10 @@
         </div>
 
         <div class="form-group-full">
-          <textarea id="sugerencia" name="sugerencia" rows="5" cols="100" required>Tu recomendación</textarea>
+          <textarea id="sugerencia" name="sugerencia" rows="5" cols="153" placeholder="Tu recomendación..." required></textarea>
         </div>
         
-        <a href="contacto.html"  class="cta-button">Enviar sugerencia</a>
+        <button type="submit" class="cta-button">Enviar sugerencia</button>
       </form>
     </section>
   </main>

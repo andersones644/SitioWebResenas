@@ -147,23 +147,30 @@ header nav a:hover {
   color: white;
 }
 
-/* Botón de contacto */
+/* Botón */
 .cta-button {
-  color: white !important;
-  font-weight: 600 !important;
-  padding: var(--spacing-sm) var(--spacing-lg) !important;
-  background: linear-gradient(135deg, var(--color4) 0%, var(--color5) 100%) !important;
-  border-radius: 6px !important;
-  transition: all 0.3s ease !important;
-  font-size: 0.9rem !important;
-  box-shadow: 0 2px 8px rgba(29, 172, 189, 0.3);
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: white !important; 
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-teal));
+  box-shadow: 0 6px 20px rgba(18, 41, 65, 0.12);
+  transition: all 0.25s ease;
 }
 
 .cta-button:hover {
-  background: linear-gradient(135deg, var(--color5) 0%, var(--color4) 100%) !important;
-  transform: translateY(-1px) !important;
-  color: white !important;
-  box-shadow: 0 4px 15px rgba(32, 218, 216, 0.4);
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, var(--color5), var(--color4));
+  box-shadow: 0 12px 34px rgba(18, 41, 65, 0.14);
+  color: #122941 !important;
+}
+
+.cta-button:active {
+  transform: translateY(1px) scale(0.998);
 }
 
 /* Contenedor principal */
@@ -418,6 +425,11 @@ section {
   grid-column: span 3;
 }
 
+.form-group input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .form-group-full {
   grid-column: span 6;
 }
@@ -428,7 +440,15 @@ section {
   padding: 0.5rem;
   border: 1px solid var(--color4, #ccc);
   border-radius: 5px;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
 }
+
+.contact-form textarea {
+  resize: none !important;
+  width: 100%;
+}
+
 
 /* Footer */
 footer {
@@ -482,6 +502,165 @@ footer p {
   font-size: 0.9rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: var(--spacing-md);
+}
+
+/* Login */
+.auth-wrap {
+  width: 100%;
+  max-width: 480px;
+  margin: 4rem auto;
+  display: grid;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.card {
+  background: linear-gradient(180deg, var(--background-white) 0%, #fcffff 100%);
+  border-radius: 12px;
+  box-shadow: var(--shadow-heavy);
+  padding: 1.5rem;
+  border: 1px solid rgba(18, 41, 65, 0.04);
+}
+
+.card .brand {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-teal));
+  color: white;
+  font-weight: 700;
+  box-shadow: var(--shadow-light);
+  flex-shrink: 0;
+}
+
+.brand h1 {
+  font-size: 1.125rem;
+  margin: 0;
+  line-height: 1;
+  color: var(--primary-dark);
+}
+
+.brand p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+form {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.375rem;
+}
+
+input[name="email"],
+input[name="password"] {
+  width: 100%;
+  padding: 0.75rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid rgba(18, 41, 65, 0.08);
+  background: linear-gradient(180deg, #ffffff, #fbfeff);
+  box-shadow: var(--shadow-light);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  transition: box-shadow 160ms ease, border-color 160ms ease, transform 120ms ease;
+}
+
+input::placeholder {
+  color: var(--text-light);
+}
+
+input:focus {
+  border-color: var(--accent-blue);
+  box-shadow: 0 6px 18px rgba(21, 118, 143, 0.08);
+  transform: translateY(-1px);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.remember {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.remember input {
+  width: 16px;
+  height: 16px;
+}
+
+
+
+.sign-up {
+  text-align: center;
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.sign-up a {
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+
+.sign-up a:hover {
+  text-decoration: underline;
+}
+
+.alt {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.85rem;
+  color: var(--text-light);
+  font-size: 0.85rem;
+}
+
+.msg {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  background: linear-gradient(180deg, rgba(20, 40, 60, 0.02), transparent);
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(18, 41, 65, 0.03);
+}
+
+@media (max-width: 380px) {
+  .card {
+    padding: 1rem;
+  }
+  .logo {
+    width: 44px;
+    height: 44px;
+  }
 }
 
 /* Responsive Design */
