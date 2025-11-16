@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once "../conexion/conexion.php";
 
 if (!isset($_SESSION["user_id"]) || !isset($_SESSION["session_token"])) {
