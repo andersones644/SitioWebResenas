@@ -650,14 +650,14 @@ input:focus {
 
 .input-icon-wrapper input {
   width: 100%;
-  padding-right: 40px; /* deja espacio para el ojo */
+  padding-right: 40px;
   box-sizing: border-box;
 }
 
 /* Ícono de ojo */
 .input-icon-wrapper .togglePassword {
   position: absolute;
-  top: 50%;
+  top: 70%;
   right: 12px;
   transform: translateY(-50%);
   cursor: pointer;

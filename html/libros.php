@@ -3,7 +3,7 @@ session_start();
 
 // Si no hay sesión activa, redirigir al login
 if (!isset($_SESSION["user_id"])) {
-    header("Location: ../login/login.php");
+    header("Location: ../login/formulario_login.php");
     exit();
 }
 ?>
