@@ -31,24 +31,50 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $msg_error = "Correo inválido.";
     } 
     else {
+
+        // Buscar usuario
         $stmt = $conn->prepare("SELECT * FROM usuarios WHERE email = ? LIMIT 1");
         $stmt->execute([$email]);
 
         if ($stmt->rowCount() === 0) {
             $msg_error = "El correo no está registrado.";
+
         } else {
+
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            // Estado
             if ($user["estado"] !== "activo") {
                 $msg_error = "Tu cuenta está inactiva.";
             }
+
+            // Contraseña
             elseif (!password_verify($password, $user["user_password"])) {
                 $msg_error = "Contraseña incorrecta.";
-            } else {
-                $_SESSION["user_id"] = $user["id"];
-                $_SESSION["username"] = $user["username"];
-                $_SESSION["rol"] = $user["rol"];
-                header("Location: ../index.php");
-                exit;
+            }
+
+            else {
+
+                if (!empty($user["session_token"])) {
+                    $msg_error = "⚠ Ya tienes una sesión activa en otro dispositivo.";
+                } else {
+
+                    // Crear token único
+                    $token = bin2hex(random_bytes(32));
+
+                    // Guardar token en DB
+                    $update = $conn->prepare("UPDATE usuarios SET session_token = ? WHERE id = ?");
+                    $update->execute([$token, $user["id"]]);
+
+                    // Guardar sesión
+                    $_SESSION["user_id"] = $user["id"];
+                    $_SESSION["username"] = $user["username"];
+                    $_SESSION["rol"] = $user["rol"];
+                    $_SESSION["session_token"] = $token;
+
+                    header("Location: ../index.php");
+                    exit;
+                }
             }
         }
     }

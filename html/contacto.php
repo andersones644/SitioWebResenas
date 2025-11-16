@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once "../login/seguridad.php";
 
 // Si no hay sesión activa, redirigir al login
 if (!isset($_SESSION["user_id"])) {
