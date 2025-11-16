@@ -575,7 +575,11 @@ label {
 }
 
 input[name="email"],
-input[name="password"] {
+input[name="password"],
+input[name="username"],
+input[name="nombre"],
+input[name="apellido"],
+input[name="celular"] {
   width: 100%;
   padding: 0.75rem 0.85rem;
   border-radius: 8px;
@@ -604,21 +608,6 @@ input:focus {
   gap: 0.5rem;
   margin-top: 0.25rem;
 }
-
-.remember {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-}
-
-.remember input {
-  width: 16px;
-  height: 16px;
-}
-
-
 
 .sign-up {
   text-align: center;
@@ -651,6 +640,41 @@ input:focus {
   padding: 0.5rem;
   border-radius: 8px;
   border: 1px solid rgba(18, 41, 65, 0.03);
+}
+
+/* Wrapper del input con ícono */
+.input-icon-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input-icon-wrapper input {
+  width: 100%;
+  padding-right: 40px; /* deja espacio para el ojo */
+  box-sizing: border-box;
+}
+
+/* Ícono de ojo */
+.input-icon-wrapper .togglePassword {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--text-light);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.input-icon-wrapper .togglePassword:hover {
+  color: var(--accent-blue);
+}
+
+.input-icon-wrapper input:focus {
+  padding-right: 40px;
 }
 
 @media (max-width: 380px) {

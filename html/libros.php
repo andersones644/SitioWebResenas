@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+// Si no hay sesión activa, redirigir al login
+if (!isset($_SESSION["user_id"])) {
+    header("Location: ../login/login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html> 
 <html lang="es">
 <head>
@@ -14,12 +24,12 @@
     <div class="container">
       <h1>Reseñas</h1>
       <nav class="nav-container">
-        <a href="../index.html">Inicio</a>
-        <a href="peliculas.html">Películas</a>
-        <a href="videojuegos.html">Videojuegos</a>
-        <a href="contacto.html">Contáctanos</a>
+        <a href="../index.php">Inicio</a>
+        <a href="peliculas.php">Películas</a>
+        <a href="videojuegos.php">Videojuegos</a>
+        <a href="contacto.php">Contáctanos</a>
       </nav>
-      <a href="contacto.html" class="cta-button">Cerrar Sesión</a>
+      <a href="#" class="cta-button" id="btnLogout">Cerrar Sesión</a>
     </div>
   </header>
 
@@ -102,5 +112,8 @@
       <p>© 2025 Reseñas. Todos los derechos reservados.</p>
     </div>
   </footer>
+
+  <script src="../javascript/script.js"></script>
+
 </body>
 </html>

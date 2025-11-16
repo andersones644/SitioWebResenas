@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+// Si no hay sesión activa, redirigir al login
+if (!isset($_SESSION["user_id"])) {
+    header("Location: login/login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,18 +18,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
 </head>
 <body>
   <header>
     <div class="container">
       <h1>Reseñas</h1>
       <nav class="nav-container">
-        <a href="html/libros.html">Libros</a>
-        <a href="html/peliculas.html">Películas</a>
-        <a href="html/videojuegos.html">Videojuegos</a>
-        <a href="html/contacto.html">Contáctanos</a>
+        <a href="html/libros.php">Libros</a>
+        <a href="html/peliculas.php">Películas</a>
+        <a href="html/videojuegos.php">Videojuegos</a>
+        <a href="html/contacto.php">Contáctanos</a>
       </nav>
-      <a href="login.php" class="cta-button">Cerrar Sesión</a>
+
+      <a href="#" class="cta-button" id="btnLogout">Cerrar Sesión</a>
     </div>
   </header>
 
@@ -70,5 +82,8 @@
       <p>© 2025 Reseñas. Todos los derechos reservados.</p>
     </div>
   </footer>
+
+  <script src="javascript/script.js"></script>
+
 </body>
 </html>
